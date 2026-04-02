@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="أكاديمية أهل القرآن - تحفيظ القرآن الكريم للرجال والنساء والأطفال | دورات التجويد | تصحيح التلاوة | إجازات بالسند المتصل">
+    <title>أكاديمية أهل القرآن | حفظ القرآن بإتقان وسند متصل</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for beautiful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic friendly -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;display=swap');
+        
+        :root {
+            --primary: #0a6c3f;
+            --accent: #d4af77;
+            --light: #f8f4eb;
+            --dark: #1a3c2e;
+        }
+        
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+        
+        .tailwind-ready {
+            font-family: 'Amiri', serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #0a6c3f 0%, #1a3c2e 100%);
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%2250%25%22 font-size=%2210%22 fill=%22rgba(212,175,119,0.08)%22%3E%E2%80%8E%3C/text%3E%3C/svg%27') repeat;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        .section-header {
+            position: relative;
+        }
+        
+        .section-header::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #d4af77, #0a6c3f);
+            border-radius: 9999px;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(10 108 63 / 0.25);
+        }
+        
+        .floating-whatsapp {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="tailwind-ready bg-[#f8f4eb] text-[#1a3c2e]">
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-[#d4af77]/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <div class="w-12 h-12 bg-[#0a6c3f] text-white rounded-2xl flex items-center justify-center text-3xl shadow-inner">
+                        🕌
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-[#0a6c3f]">أكاديمية أهل القرآن</h1>
+                        <p class="text-xs text-[#d4af77] -mt-1 tracking-widest">حفظ • تجويد • إتقان</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-lg font-medium">
+                    <a href="#home" class="hover:text-[#0a6c3f] font-semibold">الرئيسية</a>
+                    <a href="#about" class="hover:text-[#0a6c3f]">عن الأكاديمية</a>
+                    <a href="#services" class="hover:text-[#0a6c3f]">خدماتنا</a>
+                    <a href="#contact" class="hover:text-[#0a6c3f]">تواصل معنا</a>
+                </div>
+
+                <!-- Social Buttons (Desktop) -->
+                <div class="hidden md:flex items-center gap-x-3">
+                    <a href="https://wa.me/201116906864" target="_blank"
+                       class="flex items-center gap-x-2 bg-[#25D366] text-white px-5 py-2.5 rounded-3xl font-medium hover:scale-105 shadow-md">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>واتساب</span>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/share/1BSQaoJDaK/" target="_blank"
+                       class="flex items-center gap-x-2 bg-[#1877F2] text-white px-5 py-2.5 rounded-3xl font-medium hover:scale-105 shadow-md">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                        <span>فيسبوك</span>
+                    </a>
+                    
+                    <a href="https://t.me/AhlAlquran_AhlAllah" target="_blank"
+                       class="flex items-center gap-x-2 bg-[#229ED9] text-white px-5 py-2.5 rounded-3xl font-medium hover:scale-105 shadow-md">
+                        <i class="fab fa-telegram-plane text-xl"></i>
+                        <span>تليجرام</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-[#0a6c3f]">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-8 space-y-6 text-center text-lg font-medium">
+                <a href="#home" onclick="toggleMobileMenu()" class="block">الرئيسية</a>
+                <a href="#about" onclick="toggleMobileMenu()" class="block">عن الأكاديمية</a>
+                <a href="#services" onclick="toggleMobileMenu()" class="block">خدماتنا</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="block">تواصل معنا</a>
+                
+                <div class="pt-6 border-t flex flex-col gap-y-4">
+                    <a href="https://wa.me/201116906864" target="_blank" class="flex justify-center items-center gap-x-3 bg-[#25D366] text-white py-4 rounded-3xl text-xl font-medium">
+                        <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                    </a>
+                    <a href="https://www.facebook.com/share/1BSQaoJDaK/" target="_blank" class="flex justify-center items-center gap-x-3 bg-[#1877F2] text-white py-4 rounded-3xl text-xl font-medium">
+                        <i class="fab fa-facebook-f"></i> صفحتنا على فيسبوك
+                    </a>
+                    <a href="https://t.me/AhlAlquran_AhlAllah" target="_blank" class="flex justify-center items-center gap-x-3 bg-[#229ED9] text-white py-4 rounded-3xl text-xl font-medium">
+                        <i class="fab fa-telegram-plane"></i> قناتنا على تليجرام
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg text-white py-24 md:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-6 py-2 rounded-3xl text-sm mb-6 border border-white/30">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4af77]"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#d4af77]"></span>
+                </span>
+                سند متصل إلى رسول الله ﷺ
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+                أكاديمية أهل القرآن
+            </h1>
+            <p class="text-2xl md:text-3xl text-[#d4af77] max-w-2xl mx-auto mb-10">
+                تحفيظ القرآن الكريم • تجويد • تصحيح التلاوة • إجازات بالسند المتصل
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#services" 
+                   class="inline-flex items-center justify-center bg-[#d4af77] hover:bg-amber-300 text-[#1a3c2e] font-semibold text-2xl px-12 py-6 rounded-3xl shadow-xl hover:shadow-2xl">
+                    <i class="fas fa-quran ml-3"></i>
+                    ابدأ رحلتك مع القرآن الآن
+                </a>
+                
+                <a href="https://wa.me/201116906864" target="_blank"
+                   class="inline-flex items-center justify-center border-2 border-white hover:bg-white hover:text-[#0a6c3f] text-2xl px-10 py-6 rounded-3xl font-semibold">
+                    <i class="fab fa-whatsapp text-3xl ml-3"></i>
+                    احجز مكانك
+                </a>
+            </div>
+            
+            <div class="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm opacity-90">
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-male text-2xl"></i>
+                    <span>رجال</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-female text-2xl"></i>
+                    <span>نساء</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fas fa-child text-2xl"></i>
+                    <span>أطفال</span>
+                </div>
+                <div class="h-5 w-px bg-white/30"></div>
+                <div>تحفيظ • تجويد • إجازات</div>
+            </div>
+            
+            <!-- Decorative Quran -->
+            <div class="absolute bottom-8 left-1/2 hidden xl:flex items-center gap-x-8 text-[#d4af77]/30 text-8xl -translate-x-1/2">
+                <i class="fas fa-book-open"></i>
+                <i class="fas fa-mosque"></i>
+                <i class="fas fa-book-open"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7">
+                    <h2 class="section-header text-4xl font-bold mb-6">من نحن؟</h2>
+                    <div class="prose text-lg leading-relaxed text-[#1a3c2e]/90 max-w-none">
+                        <p class="mb-6">
+                            أكاديمية أهل القرآن هي منصة تعليمية متخصصة في خدمة كتاب الله عز وجل. 
+                            نهدف إلى نشر تعليم القرآن الكريم بطريقة احترافية وممنهجة للرجال والنساء والأطفال.
+                        </p>
+                        <p>
+                            نعتمد على أفضل المعلمين الحافظين المجازين، ونقدم برامج تحفيظ، تجويد، تصحيح تلاوة، 
+                            ومنح إجازات قرآنية بالسند المتصل إلى رسول الله ﷺ.
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center gap-8 mt-12 text-sm uppercase tracking-widest">
+                        <div class="flex items-center">
+                            <div class="text-5xl font-bold text-[#0a6c3f]">١٠٠٪</div>
+                            <div class="mr-3">سند متصل</div>
+                        </div>
+                        <div class="h-12 w-px bg-gray-200"></div>
+                        <div>دروس فردية وجماعية</div>
+                        <div class="h-12 w-px bg-gray-200"></div>
+                        <div>متابعة يومية</div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5">
+                    <div class="bg-[#f8f4eb] rounded-3xl p-8 shadow-xl text-center">
+                        <i class="fas fa-quran text-9xl text-[#0a6c3f]/10 mb-6"></i>
+                        <h3 class="text-3xl font-bold text-[#0a6c3f] mb-2">﴿ وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مِنْ أَمْرِهِ يُسْرًا ﴾</h3>
+                        <p class="text-[#1a3c2e]/70">الطلاق: ٤</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-20 bg-[#f8f4eb]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-6 py-2 bg-[#0a6c3f] text-white text-sm font-medium rounded-3xl">خدماتنا</span>
+                <h2 class="text-5xl font-bold mt-4">ما نقدمه لك</h2>
+                <p class="text-xl text-[#1a3c2e]/70 mt-3 max-w-md mx-auto">برامج متكاملة لتحفيظ وإتقان كتاب الله</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-male"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">تحفيظ القرآن للرجال</h3>
+                    <p class="text-[#1a3c2e]/80">برنامج شامل يركز على الحفظ المتقن مع مراعاة أحكام التجويد ومراجعة يومية.</p>
+                    <ul class="mt-8 space-y-2 text-sm">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> حصص يومية أو أسبوعية</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> متابعة شخصية</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-female"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">تحفيظ القرآن للنساء</h3>
+                    <p class="text-[#1a3c2e]/80">دروس خاصة بالنساء بأجواء مريحة ومعلمات مجازات  .</p>
+                    <ul class="mt-8 space-y-2 text-sm">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> خصوصية كاملة</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> جدول مرن</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-child"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">تحفيظ القرآن للأطفال</h3>
+                    <p class="text-[#1a3c2e]/80">طريقة ممتعة وتفاعلية مع ألعاب تعليمية وأنشطة تحفيزية للأطفال.</p>
+                    <ul class="mt-8 space-y-2 text-sm">
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> طرق حديثة وممتعة</li>
+                        <li class="flex items-center gap-x-2"><i class="fas fa-check text-[#d4af77]"></i> شهادات تقدير</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-book"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">دورات التجويد</h3>
+                    <p class="text-[#1a3c2e]/80">تعلم أحكام التجويد من الأساسيات إلى المستوى المتقدم مع تطبيق عملي.</p>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-headphones"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">تصحيح التلاوة</h3>
+                    <p class="text-[#1a3c2e]/80">جلسات تصحيح صوتي مباشرة لإزالة الأخطاء وتحسين المخارج والأداء.</p>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="card-hover bg-white rounded-3xl p-8 shadow-md border border-transparent hover:border-[#d4af77]/30">
+                    <div class="text-[#0a6c3f] text-4xl mb-6"><i class="fas fa-certificate"></i></div>
+                    <h3 class="text-2xl font-bold mb-3">الإجازات بالسند المتصل</h3>
+                    <p class="text-[#1a3c2e]/80">منح إجازة قرآنية كاملة بسند متصل إلى النبي ﷺ بعد إتمام الحفظ والتجويد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <div class="bg-[#0a6c3f] text-white py-12">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-3xl font-bold mb-6">هل أنت جاهز لحفظ كتاب الله؟</p>
+            <a href="https://wa.me/201116906864" target="_blank"
+               class="inline-flex items-center justify-center bg-white text-[#0a6c3f] hover:bg-[#d4af77] text-2xl font-semibold px-16 py-7 rounded-3xl shadow-2xl">
+                <i class="fab fa-whatsapp text-4xl ml-4"></i>
+                أرسل رسالة الآن على واتساب
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-center text-5xl font-bold mb-4">تواصل معنا مباشرة</h2>
+            <p class="text-center text-xl text-[#1a3c2e]/70 mb-12">نرد عليك خلال دقائق</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/201116906864" target="_blank"
+                   class="group flex flex-col items-center bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white rounded-3xl p-8 hover:scale-105 text-center">
+                    <i class="fab fa-whatsapp text-7xl mb-6 group-active:scale-110"></i>
+                    <h3 class="text-3xl font-bold mb-2">واتساب</h3>
+                    <p class="opacity-90">01116906864</p>
+                    <span class="text-xs mt-8 uppercase tracking-[2px]">اضغط للتواصل الفوري</span>
+                </a>
+                
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/share/1BSQaoJDaK/" target="_blank"
+                   class="group flex flex-col items-center bg-gradient-to-br from-[#1877F2] to-[#0A5CFF] text-white rounded-3xl p-8 hover:scale-105 text-center">
+                    <i class="fab fa-facebook-f text-7xl mb-6 group-active:scale-110"></i>
+                    <h3 class="text-3xl font-bold mb-2">فيسبوك</h3>
+                    <p class="opacity-90">صفحة الأكاديمية الرسمية</p>
+                    <span class="text-xs mt-8 uppercase tracking-[2px]">تابعنا لآخر الدروس</span>
+                </a>
+                
+                <!-- Telegram -->
+                <a href="https://t.me/AhlAlquran_AhlAllah" target="_blank"
+                   class="group flex flex-col items-center bg-gradient-to-br from-[#229ED9] to-[#0088CC] text-white rounded-3xl p-8 hover:scale-105 text-center">
+                    <i class="fab fa-telegram-plane text-7xl mb-6 group-active:scale-110"></i>
+                    <h3 class="text-3xl font-bold mb-2">تليجرام</h3>
+                    <p class="opacity-90">@AhlAlquran_AhlAllah</p>
+                    <span class="text-xs mt-8 uppercase tracking-[2px]">انضم للقناة الرسمية</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1a3c2e] text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center gap-x-3">
+                    <div class="w-10 h-10 bg-[#d4af77] text-[#1a3c2e] rounded-2xl flex items-center justify-center text-4xl">🕌</div>
+                    <div class="text-2xl font-bold">أكاديمية أهل القرآن</div>
+                </div>
+                
+                <p class="text-[#d4af77] text-center md:text-right">© ٢٠٢٦ - جميع الحقوق محفوظة</p>
+                
+                <div class="flex gap-x-6 text-2xl">
+                    <a href="https://wa.me/201116906864" target="_blank" class="hover:text-[#d4af77]"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/share/1BSQaoJDaK/" target="_blank" class="hover:text-[#d4af77]"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://t.me/AhlAlquran_AhlAllah" target="_blank" class="hover:text-[#d4af77]"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+            
+            <div class="text-center text-xs mt-12 opacity-50">
+                صُمم بحب لخدمة كتاب الله عز وجل
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/201116906864" target="_blank"
+       class="floating-whatsapp fixed bottom-8 left-8 bg-[#25D366] text-white w-16 h-16 rounded-3xl shadow-2xl flex items-center justify-center text-4xl z-[9999] hover:scale-110">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Tailwind script configuration
+        function initializeTailwind() {
+            return {
+                config(userConfig = {}) {
+                    return {
+                        content: [],
+                        theme: {
+                            extend: {}
+                        },
+                        plugins: [],
+                        ...userConfig,
+                    }
+                },
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#0a6c3f',
+                            accent: '#d4af77'
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu')
+            menu.classList.toggle('hidden')
+        }
+        
+        // Auto run Tailwind
+        document.addEventListener('DOMContentLoaded', () => {
+            const config = initializeTailwind().config()
+            return {
+                configUser: () => config,
+            }
+        })
+        
+        console.log('%c✅ موقع أكاديمية أهل القرآن تم تحميله بنجاح! 🎉', 'color:#0a6c3f; font-family:Amiri; font-size:18px')
+    </script>
+</body>
+</html>
